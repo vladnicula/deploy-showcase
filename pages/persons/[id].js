@@ -30,7 +30,7 @@ export const getStaticProps = async (context) => {
     console.log(`getStaticProps`, context.params.id)
     const id = context.params.id
     try {
-        await new Promise((resolve) => setTimeout(resolve, 10000))
+        await new Promise((resolve) => setTimeout(resolve, 2000))
         const personData = await fetch(`https://swapi.dev/api/people/${id}`).then((httpResponse) => httpResponse.json())
         return {
             props: {
